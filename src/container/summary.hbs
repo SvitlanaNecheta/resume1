@@ -4,31 +4,42 @@
 --}}
 
 <div>
+     <div>
+        <a href="/"class="btn btn-warning m-4 p-2">Головна</a>
+    </div>
+
     {{#with main}}
     <main>
         <section>
+
+            <div class="card m-4 p-4">
             {{#with summary}}
-            {{>title data=title}}
-            <div>
-                <p>
-                   {{text}}
-                </p>
-            </div>
+                <div class="card-body">
+                    <div class="card-title">{{>title data=title}}</div>
+                    <p>
+                        {{text}}
+                    </p>
+                </div>
             {{/with}}
+            </div>
+
         </section>
          <section>
-            {{#with experience}}
-            {{>title data=title}}
-            <div>
-                <p>
-                    {{text}}
-                </p>
+            <div class="card m-4 p-4">
+                {{#with experience}}
+                <div class="card-body">
+                    <div class="card-title">{{>title data=title}}</div>
+                    <p>
+                        {{text}}
+                    </p>
+                </div>
+                {{/with}}
             </div>
-            {{/with}}
         </section>
     </main>
 {{/with}}
-   
+
+
 </div>
 
 {{!-- 

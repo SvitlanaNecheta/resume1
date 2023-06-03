@@ -3,12 +3,15 @@
 в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/summary"
 --}}
 <div>
+    <div>
+        <a href="/"class="btn btn-warning">Головна</a>
+    </div>
 
     {{#with main}}
     <main>
         <section>
             {{>title data="Work history" big=true}}
-            <div>
+            <div class="card m-4 p-4">
                 <ul>
 
                     {{#each works}}
@@ -19,7 +22,7 @@
                         <br>
                        {{#if urlOK}}
                         <div>
-                            {{> link text=company.name href=company.url blank=true noLine=true}}
+                            {{>link text=company.name href=company.url}}
                         </div>
                         {{else}}
                         <div><b>{{company.name}}</b></div>
@@ -32,7 +35,7 @@
                         <ul>
                             {{#each projects}}
                             <li>
-                               <div> {{> link text=name href=url blank=true noLine=true}}</div>
+                               <div> {{> link text=name href=url}}</div>
                                <br>
                                <div><p>{{about}}</p></div>
                                <br>
